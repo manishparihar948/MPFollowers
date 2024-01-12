@@ -39,7 +39,9 @@ class SearchVC: UIViewController {
     // Because we have objective c function #selector in keyboard
     @objc func pushFollowerListVC() {
         guard isUserNameEntered else {
-            print("No username")
+            // print("No username")
+            // Command + Control + Spacebar = Emoji's
+            presentGFAlertOnMainTread(title: "Empty Username", message: "Please enter username. We need to know who look for 😀.", buttonTitle: "Ok")
             return
         }
         let followerListVC = FollowerListVC()
